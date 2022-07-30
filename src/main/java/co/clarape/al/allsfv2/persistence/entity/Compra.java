@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class Compra {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_COMPRAS")
     @Column(name="id_compra")
     private Integer idProducto;
 

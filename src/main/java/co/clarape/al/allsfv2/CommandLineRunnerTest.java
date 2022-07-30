@@ -40,6 +40,17 @@ public class CommandLineRunnerTest implements CommandLineRunner{
             System.out.println("Producto.nombre: " + producto.getNombre());
         }
 
+        Producto p = new Producto();
+        p.setIdCategoria(1);
+        p.setCantidadStock(1);
+        p.setCodigoBarras("COD-01");
+        p.setEstado("true");
+        p.setNombre("MECHON01");
+        p.setPrecioVenta(2000.00);
+        
+        p = productoRepository.save(p);
+        System.out.println(">>>Nuevo producto. Id:: " + p.getIdProducto());
+
 
         
 

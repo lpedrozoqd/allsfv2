@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import co.clarape.al.allsfv2.persistence.crud.ProductoCrudRepository;
 import co.clarape.al.allsfv2.persistence.entity.Producto;
 
-@Service
+@Repository
 public class ProductoRepository {
     @Autowired
     private ProductoCrudRepository productoCrudRepository;
@@ -19,9 +19,12 @@ public class ProductoRepository {
         return (List<Producto>) productoCrudRepository.findAll();
     }
 
-    
     public List<Producto> getProductosByCategoriaOrderedAsc(int idCategoria){
         return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
+    }
+
+    public Producto save(Producto producto){
+        return productoCrudRepository.save(producto);
     }
 }
 
