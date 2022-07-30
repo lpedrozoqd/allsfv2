@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "productos")
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PRODUCTOS")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_producto")
     private Integer idProducto;
 
