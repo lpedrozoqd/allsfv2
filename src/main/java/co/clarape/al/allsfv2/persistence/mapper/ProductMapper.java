@@ -23,7 +23,7 @@ public interface ProductMapper {
         @Mapping(source="categoria", target = "category"),  //En este caso usará el Mapper ya definido en 'CategoryMapper'
     })
     Product toProduct(Producto producto);
-    List<Product> toProducts(List<Product> products);  //En este método no hay que declarar Mappings puesto que tomará la definición del método anterior.
+    List<Product> toProducts(List<Producto> productos);  //En este método no hay que declarar Mappings puesto que tomará la definición del método anterior.
 
     @InheritInverseConfiguration
     @Mapping(target = "codigoBarras", ignore = true)
